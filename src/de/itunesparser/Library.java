@@ -1,12 +1,13 @@
 package de.itunesparser;
 
+import java.net.URL;
 import java.util.Date;
 
 /**
  * This class represents an iTunes Library.<br>
  * Every property of an iTunes Library is stored in this object.
  * 
- * @version 1.0
+ * @version 1.1
  * @author Phillip Remmert
  * @see https://developer.apple.com/documentation/ituneslibrary/itlibrary
  */
@@ -17,7 +18,7 @@ public class Library {
 	private String libraryPersistentID;
 	private Integer majorVersion;
 	private Integer minorVersion;
-	private String musicFolder;
+	private URL musicFolder;
 	private Boolean showContentRatings;
 	
 	// --------------------------------------------------
@@ -48,7 +49,7 @@ public class Library {
 		return this.minorVersion;
 	}
 	
-	public String getMusicFolder() {
+	public URL getMusicFolder() {
 		return this.musicFolder;
 	}
 	
@@ -84,7 +85,7 @@ public class Library {
 		this.minorVersion = minorVersion;
 	}
 	
-	public void setMusicFolder(String musicFolder) {
+	public void setMusicFolder(URL musicFolder) {
 		this.musicFolder = musicFolder;
 	}
 	

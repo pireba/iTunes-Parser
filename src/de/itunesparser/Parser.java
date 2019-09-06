@@ -70,7 +70,7 @@ import org.dom4j.io.SAXReader;
  * </pre>
  * 
  * @author Phillip Remmert
- * @version 1.0
+ * @version 1.1
  */
 public class Parser {
 	/**
@@ -282,7 +282,7 @@ public class Parser {
 			if ( object instanceof Library ) {
 				try {
 					this.addToLibrary((Library) object, key, value);
-				} catch (ParseException e) {
+				} catch (ParseException | MalformedURLException e) {
 					log.log(Level.SEVERE, "Error while parsing a Library property.", e);
 				}
 			} else if ( object instanceof Track ) {
@@ -310,8 +310,9 @@ public class Parser {
 	 * @param key The key.
 	 * @param value The value.
 	 * @throws ParseException If the given value can not be parsed into the correct data type.
+	 * @throws MalformedURLException If the given value can not be parsed into an {@linkplain URL} object.
 	 */
-	private void addToLibrary(Library library, String key, String value) throws ParseException {
+	private void addToLibrary(Library library, String key, String value) throws ParseException, MalformedURLException {
 		switch (key) {
 		case "Major Version":
 			library.setMajorVersion(Integer.parseInt(value));
@@ -332,7 +333,7 @@ public class Parser {
 			library.setShowContentRatings(Boolean.parseBoolean(value));
 			break;
 		case "Music Folder":
-			library.setMusicFolder(value);
+			library.setMusicFolder(new URL(value));
 			break;
 		case "Library Persistent ID":
 			library.setLibraryPersistentID(value);
@@ -472,7 +473,7 @@ public class Parser {
 			track.setSampleRate(Integer.parseInt(value));
 			break;
 		case "Size":
-			track.setSize(Integer.parseInt(value));
+			track.setSize(Long.parseLong(value));
 			break;
 		case "Skip Count":
 			track.setSkipCount(Integer.parseInt(value));

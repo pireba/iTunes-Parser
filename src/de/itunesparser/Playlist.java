@@ -7,7 +7,7 @@ import java.util.Map;
  * Every property of an iTunes Playlist is stored in this object.<br>
  * The Tracks of a Playlist are stored as a Map of {@linkplain Track} objects in the attribute "playlistItems".
  * 
- * @version 1.0
+ * @version 1.1
  * @author Phillip Remmert
  * @see https://developer.apple.com/documentation/ituneslibrary/itlibplaylist
  */

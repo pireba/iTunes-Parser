@@ -7,7 +7,7 @@ import java.util.Date;
  * This class represents an iTunes Track.<br>
  * Every property of an iTunes Track is stored in this object.
  * 
- * @version 1.0
+ * @version 1.1
  * @author Phillip Remmert
  * @see https://developer.apple.com/documentation/ituneslibrary/itlibmediaitem
  */
@@ -18,7 +18,7 @@ public class Track {
 	private Boolean albumRatingComputed;
 	private String artist;
 	private Integer artworkCount;
-	private Integer bitRate;
+	private Integer bitrate;
 	private Integer bpm;
 	private Boolean clean;
 	private String comments;
@@ -53,7 +53,7 @@ public class Track {
 	private Integer sampleRate;
 	private Integer season;
 	private String series;
-	private Integer size;
+	private Long size;
 	private Integer skipCount;
 	private Date skipDate;
 	private String sortAlbum;
@@ -101,7 +101,7 @@ public class Track {
 	}
 	
 	public Integer getBitRate() {
-		return this.bitRate;
+		return this.bitrate;
 	}
 	
 	public Integer getBpm() {
@@ -240,7 +240,7 @@ public class Track {
 		return this.series;
 	}
 	
-	public Integer getSize() {
+	public Long getSize() {
 		return this.size;
 	}
 	
@@ -341,7 +341,7 @@ public class Track {
 	}
 	
 	public void setBitRate(Integer bitRate) {
-		this.bitRate = bitRate;
+		this.bitrate = bitRate;
 	}
 	
 	public void setBpm(Integer bpm) {
@@ -480,7 +480,7 @@ public class Track {
 		this.series = series;
 	}
 	
-	public void setSize(Integer size) {
+	public void setSize(Long size) {
 		this.size = size;
 	}
 	
