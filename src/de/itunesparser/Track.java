@@ -72,6 +72,13 @@ public class Track {
 	private Integer volumeAdjustment;
 	private Integer year;
 	
+	private Boolean video;
+	private Boolean movie;
+	private Integer videoHeight;
+	private Integer videoWidth;
+	private Boolean unplayed;
+	private Boolean podcast;
+	
 	// --------------------------------------------------
 	// Getter
 	// --------------------------------------------------
@@ -312,6 +319,31 @@ public class Track {
 		return this.year;
 	}
 	
+	public Boolean isVideo(){
+		return this.video;
+	}
+	
+	public Boolean isMovie(){
+		return this.movie;
+	}
+	
+	public Integer getVideoHeight(){
+		return this.videoHeight;
+	}
+	
+	public Integer getVideoWidth(){
+		return this.videoWidth;
+	}
+	
+	public Boolean isUnplayed(){
+		return this.unplayed;
+	}
+	
+	public Boolean isPodcast(){
+		return this.podcast;
+	}
+	
+	
 	// --------------------------------------------------
 	// Setter
 	// --------------------------------------------------
@@ -551,4 +583,29 @@ public class Track {
 	public void setYear(Integer year) {
 		this.year = year;
 	}
+	
+	public void setVideo(Boolean isVideo){
+		this.video = isVideo;				
+	}
+	
+	public void setMovie(Boolean isMovie){
+		this.movie = isMovie;				
+	}
+	
+	public void setVideoHeight(Integer videoHeight){
+		this.videoHeight = videoHeight;				
+	}
+	
+	public void setVideoWidth(Integer videoWidth){
+		this.videoWidth = videoWidth;	
+	}
+	
+	public void setUnplayed(Boolean isUnplayed){
+		this.unplayed = isUnplayed;				
+	}
+	
+	public void setPodcast(Boolean isPodcast){
+		this.podcast = isPodcast;
+	}
+	
 }

@@ -532,10 +532,29 @@ public class Parser {
 		case "Year":
 			track.setYear(Integer.parseInt(value));
 			break;
+		case "Has Video":
+			track.setVideo(Boolean.parseBoolean(value));
+			break;
+		case "Movie":
+			track.setMovie(Boolean.parseBoolean(value));
+			break;
+		case "Video Height":
+			track.setVideoHeight(Integer.parseInt(value));
+			break;
+		case "Video Width":
+			track.setVideoWidth(Integer.parseInt(value));
+			break;
+		case "Unplayed":
+			track.setUnplayed(Boolean.parseBoolean(value));
+			break;
+		case "Podcast":
+			track.setPodcast(Boolean.parseBoolean(value));
+			break;
 		default:
 			log.warning("Unknown Track key '"+key+"' with value '"+value+"'");
 			break;
 		}
+		
 	}
 	
 	/**
