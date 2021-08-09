@@ -9,7 +9,11 @@ import java.util.Date;
  * 
  * @version 1.1
  * @author Phillip Remmert
- * @see https://developer.apple.com/documentation/ituneslibrary/itlibmediaitem
+ * @see
+ * 		<a
+ * 			href="https://developer.apple.com/documentation/ituneslibrary/itlibmediaitem">
+ * 			ITLibMediaItem
+ * 		</a>
  */
 public class Track {
 	private String album;

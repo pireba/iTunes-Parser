@@ -9,7 +9,11 @@ import java.util.Map;
  * 
  * @version 1.1
  * @author Phillip Remmert
- * @see https://developer.apple.com/documentation/ituneslibrary/itlibplaylist
+ * @see
+ * 		<a
+ * 			href="https://developer.apple.com/documentation/ituneslibrary/itlibplaylist">
+ * 			ITLibPlaylist
+ * 		</a>
  */
 public class Playlist {
 	private Boolean allItems;

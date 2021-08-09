@@ -1,8 +1,6 @@
 package com.github.pireba.itunesparser;
 
 import java.io.File;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
@@ -13,6 +11,7 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.ElementHandler;
@@ -121,29 +120,7 @@ public class Parser {
 	 * This includes a Map of the Playlist Tracks.
 	 */
 	private Map<Integer, Playlist> playlists = new HashMap<Integer, Playlist>();
-	
-	/**
-	 * Main method only for testing.
-	 * @param args
-	 * @throws DocumentException
-	 * @throws InvocationTargetException 
-	 * @throws IllegalArgumentException 
-	 * @throws IllegalAccessException 
-	 */
-	public static void main(String[] args) throws DocumentException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		Parser parser = new Parser(new File("/home/phillip/iTunes Music Library.xml"));
-		parser.parse();
 		
-		for ( Playlist playlist : parser.getPlaylists().values() ) {
-			for ( Method method : playlist.getClass().getMethods() ) {
-				if ( method.getName().startsWith("get") || method.getName().startsWith("is") ) {
-					System.out.println(method.getName()+": '"+method.invoke(playlist, new Object[] {})+"'");;
-				}
-			}
-			System.out.println("--------------------------------------------------");
-		}
-	}
-	
 	/**
 	 * Creates a new ITunesParser instance for the given XML file.<br>
 	 * To parse the File, call the method {@code parse()}.

@@ -9,7 +9,11 @@ import java.util.Date;
  * 
  * @version 1.1
  * @author Phillip Remmert
- * @see https://developer.apple.com/documentation/ituneslibrary/itlibrary
+ * @see
+ * 		<a
+ * 			href="https://developer.apple.com/documentation/ituneslibrary/itlibrary">
+ * 			ITLibrary
+ * 		</a>
  */
 public class Library {
 	private String applicationVersion;
