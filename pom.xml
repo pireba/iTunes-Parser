@@ -4,7 +4,7 @@
 	
 	<groupId>com.github.pireba</groupId>
 	<artifactId>itunesparser</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<name>iTunes-Parser</name>
@@ -29,16 +29,12 @@
 	</developers>
 	
 	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
- 		<repository>
+		<repository>
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
-	
+	 
 	<scm>
 		<url>https://github.com/pireba/iTunes-Parser</url>
 		<connection>scm:git:https://github.com/pireba/iTunes-Parser.git</connection>
@@ -61,7 +57,6 @@
 	</dependencies>
 	
 	<build>
-		<finalName>${project.name}-${project.version}</finalName>
 		<plugins>
 			<!-- Compile -->
 			<plugin>
@@ -140,21 +135,23 @@
 				</executions>
 			</plugin>
 			<!-- Release -->
-			<!-- mvn clean release:clean release:prepare release:perform || mvn release:rollback -->
-			<plugin>
+ 			<!-- mvn clean release:clean release:prepare release:perform || mvn release:rollback -->
+ 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.3</version>
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<remoteTagging>false</remoteTagging>
+					<suppressCommitBeforeTag>true</suppressCommitBeforeTag>
 				</configuration>
 			</plugin>
-			<!-- Nexus -->
+			<!-- Deploy -->
+			<!-- mvn clean deploy -->
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.8</version>
-				<extensions>true</extensions>
+				<version>1.6.7</version>
 				<configuration>
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
