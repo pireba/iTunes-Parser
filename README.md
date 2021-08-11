@@ -1,3 +1,7 @@
+
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.pireba/itunesparser?color=success&logo=apachemaven&style=for-the-badge)](https://mvnrepository.com/artifact/com.github.pireba/itunesparser)
+[![Javadoc](https://javadoc.io/badge2/com.github.pireba/itunesparser/javadoc.svg?color=success&logo=readthedocs&style=for-the-badge)](https://javadoc.io/doc/com.github.pireba/itunesparser)
+
 # iTunes Parser
 A Java parser for the iTunes Library XML file.
 
@@ -72,5 +76,20 @@ The Tracks of a Playlist are collected as a Track Map in the attribute "playlist
         System.out.println(track.getName());
     }
 
+## Build
+iTunes-Parser is a Maven project.
+
+Build an executable jar from the source:
+
+```
+mvn clean compile package
+```
+
+Create a new release and deploy it to Maven central:
+
+```
+mvn clean release:clean release:prepare release:perform || mvn release:rollback
+```
+
 # TODO
-- Save the order of the songs in a playlist.
+- [ ] Save the order of the songs in a playlist.
