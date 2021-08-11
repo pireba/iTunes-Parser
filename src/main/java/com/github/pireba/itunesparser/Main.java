@@ -10,5 +10,8 @@ public class Main {
 		File file = new File(url.toURI());
 		Parser parser = new Parser(file);
 		parser.parse();
+		
+		System.out.println("Playlists: "+parser.getPlaylists().size());
+		System.out.println("Tracks: "+parser.getTracks().size());
 	}
 }
