@@ -33,6 +33,10 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
 	</distributionManagement>
 	 
 	<scm>
@@ -142,8 +146,6 @@
 				<version>2.5.3</version>
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<remoteTagging>false</remoteTagging>
-					<suppressCommitBeforeTag>true</suppressCommitBeforeTag>
 				</configuration>
 			</plugin>
 			<!-- Deploy -->
