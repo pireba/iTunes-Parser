@@ -6,6 +6,7 @@ import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
@@ -611,17 +612,18 @@ public class Parser {
 	 * @param playlist The {@linkplain Playlist} object.
 	 */
 	private void addTracksToPlaylist(Element element, Playlist playlist) {
-		List<Element> elements = element.elements();
-		Map<Integer, Track> tracks = new HashMap<>();
-		
-		for ( int i=0; i<elements.size(); i++ ) {
-			int id = Integer.parseInt(elements.get(i).elements().get(1).getText());
-			Track track = this.tracks.get(id);
-			tracks.put(id, track);
-		}
-		
-		playlist.setPlaylistItems(tracks);
-	}
+        List<Element> elements = element.elements();
+        Map<Integer, Track> tracks = new LinkedHashMap<>();
+
+        for (int i = 0; i < elements.size(); i++) {
+
+            int id = Integer.parseInt(elements.get(i).elements().get(1).getText());
+            Track track = this.tracks.get(id);
+            tracks.put(id, track);
+        }
+
+        playlist.setPlaylistItems(tracks);
+    }
 	
 	// --------------------------------------------------
 	// Getter & Setter
