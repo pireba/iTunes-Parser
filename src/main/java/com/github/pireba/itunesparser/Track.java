@@ -82,6 +82,7 @@ public class Track {
 	private Boolean unplayed;
 	private Boolean podcast;
     private Integer normalization;
+    private String work;
 	
 	// --------------------------------------------------
 	// Getter
@@ -93,54 +94,6 @@ public class Track {
 
     public Integer getBitrate() {
         return bitrate;
-    }
-
-    public Boolean getClean() {
-        return clean;
-    }
-
-    public Boolean getCompilation() {
-        return compilation;
-    }
-
-    public Boolean getDisabled() {
-        return disabled;
-    }
-
-    public Boolean getExplicit() {
-        return explicit;
-    }
-
-    public Boolean getLoved() {
-        return loved;
-    }
-
-    public Boolean getPartOfGaplessAlbum() {
-        return partOfGaplessAlbum;
-    }
-
-    public Boolean getPurchased() {
-        return purchased;
-    }
-
-    public Boolean getVideo() {
-        return video;
-    }
-
-    public Boolean getMovie() {
-        return movie;
-    }
-
-    public Boolean getUnplayed() {
-        return unplayed;
-    }
-
-    public Boolean getPodcast() {
-        return podcast;
-    }
-
-    public Integer getNormalization() {
-        return normalization;
     }
 
     public String getAlbum() {
@@ -403,6 +356,13 @@ public class Track {
 		return this.podcast;
 	}
 	
+	public Integer getNormalization() {
+        return normalization;
+    }
+	
+	public String getWork() {
+	    return work;
+	}
 	
 	// --------------------------------------------------
 	// Setter
@@ -434,10 +394,6 @@ public class Track {
 
     public void setBitrate(Integer bitrate) {
         this.bitrate = bitrate;
-    }
-
-    public void setNormalization(Integer normalization) {
-        this.normalization = normalization;
     }
 	
 	public void setBpm(Integer bpm) {
@@ -670,6 +626,14 @@ public class Track {
 	
 	public void setPodcast(Boolean isPodcast){
 		this.podcast = isPodcast;
+	}
+	
+	public void setNormalization(Integer normalization) {
+        this.normalization = normalization;
+    }
+	
+	public void setWork(String work) {
+	    this.work = work;
 	}
 	
 }

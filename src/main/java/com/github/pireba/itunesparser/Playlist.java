@@ -38,45 +38,9 @@ public class Playlist {
 	// --------------------------------------------------
 	// Getter
 	// --------------------------------------------------
-	
-	public Boolean getAllItems() {
-        return allItems;
-    }
 
     public Boolean getAudiobooks() {
         return audiobooks;
-    }
-
-    public Boolean getFolder() {
-        return folder;
-    }
-
-    public Boolean getMaster() {
-        return master;
-    }
-
-    public Boolean getMovies() {
-        return movies;
-    }
-
-    public Boolean getMusic() {
-        return music;
-    }
-
-    public Boolean getPodcasts() {
-        return podcasts;
-    }
-
-    public Boolean getTvShows() {
-        return tvShows;
-    }
-
-    public Boolean getVisible() {
-        return visible;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public Boolean isAllItems() {
@@ -146,6 +110,10 @@ public class Playlist {
 	public Boolean isVisible() {
 		return this.visible;
 	}
+	
+	public String getDescription() {
+        return description;
+    }
 	
 	// --------------------------------------------------
 	// Setter

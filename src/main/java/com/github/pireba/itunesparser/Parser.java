@@ -531,6 +531,9 @@ public class Parser {
         case "Normalization":
             track.setNormalization(Integer.parseInt(value));
             break;
+        case "Work":
+            track.setWork(value);
+            break;
 		default:
 			log.warning("Unknown Track key '"+key+"' with value '"+value+"'");
 			break;
@@ -604,6 +607,7 @@ public class Parser {
 			break;
         case "Description":
             playlist.setDescription(value);
+            break;
 		default:
 			log.warning("Unknown Playlist key '"+key+"' with value '"+value+"'");
 			break;
