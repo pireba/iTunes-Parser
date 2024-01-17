@@ -33,12 +33,53 @@ public class Playlist {
 	private String smartInfo;
 	private Boolean tvShows;
 	private Boolean visible;
+    private String description;
 	
 	// --------------------------------------------------
 	// Getter
 	// --------------------------------------------------
 	
-	public Boolean isAllItems() {
+	public Boolean getAllItems() {
+        return allItems;
+    }
+
+    public Boolean getAudiobooks() {
+        return audiobooks;
+    }
+
+    public Boolean getFolder() {
+        return folder;
+    }
+
+    public Boolean getMaster() {
+        return master;
+    }
+
+    public Boolean getMovies() {
+        return movies;
+    }
+
+    public Boolean getMusic() {
+        return music;
+    }
+
+    public Boolean getPodcasts() {
+        return podcasts;
+    }
+
+    public Boolean getTvShows() {
+        return tvShows;
+    }
+
+    public Boolean getVisible() {
+        return visible;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Boolean isAllItems() {
 		return this.allItems;
 	}
 	
@@ -177,4 +218,8 @@ public class Playlist {
 	public void setVisible(Boolean visible) {
 		this.visible = visible;
 	}
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

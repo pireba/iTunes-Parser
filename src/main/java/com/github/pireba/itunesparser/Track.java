@@ -75,19 +75,75 @@ public class Track {
 	private String trackType;
 	private Integer volumeAdjustment;
 	private Integer year;
-	
 	private Boolean video;
 	private Boolean movie;
 	private Integer videoHeight;
 	private Integer videoWidth;
 	private Boolean unplayed;
 	private Boolean podcast;
+    private Integer normalization;
 	
 	// --------------------------------------------------
 	// Getter
 	// --------------------------------------------------
 	
-	public String getAlbum() {
+	public Boolean getAlbumRatingComputed() {
+        return albumRatingComputed;
+    }
+
+    public Integer getBitrate() {
+        return bitrate;
+    }
+
+    public Boolean getClean() {
+        return clean;
+    }
+
+    public Boolean getCompilation() {
+        return compilation;
+    }
+
+    public Boolean getDisabled() {
+        return disabled;
+    }
+
+    public Boolean getExplicit() {
+        return explicit;
+    }
+
+    public Boolean getLoved() {
+        return loved;
+    }
+
+    public Boolean getPartOfGaplessAlbum() {
+        return partOfGaplessAlbum;
+    }
+
+    public Boolean getPurchased() {
+        return purchased;
+    }
+
+    public Boolean getVideo() {
+        return video;
+    }
+
+    public Boolean getMovie() {
+        return movie;
+    }
+
+    public Boolean getUnplayed() {
+        return unplayed;
+    }
+
+    public Boolean getPodcast() {
+        return podcast;
+    }
+
+    public Integer getNormalization() {
+        return normalization;
+    }
+
+    public String getAlbum() {
 		return this.album;
 	}
 	
@@ -375,10 +431,14 @@ public class Track {
 	public void setArtworkCount(Integer artworkCount) {
 		this.artworkCount = artworkCount;
 	}
-	
-	public void setBitRate(Integer bitRate) {
-		this.bitrate = bitRate;
-	}
+
+    public void setBitrate(Integer bitrate) {
+        this.bitrate = bitrate;
+    }
+
+    public void setNormalization(Integer normalization) {
+        this.normalization = normalization;
+    }
 	
 	public void setBpm(Integer bpm) {
 		this.bpm = bpm;

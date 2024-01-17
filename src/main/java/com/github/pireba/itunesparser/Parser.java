@@ -352,7 +352,7 @@ public class Parser {
 			track.setArtworkCount(Integer.parseInt(value));
 			break;
 		case "Bit Rate":
-			track.setBitRate(Integer.parseInt(value));
+			track.setBitrate(Integer.parseInt(value));
 			break;
 		case "BPM":
 			track.setBpm(Integer.parseInt(value));
@@ -528,6 +528,9 @@ public class Parser {
 		case "Podcast":
 			track.setPodcast(Boolean.parseBoolean(value));
 			break;
+        case "Normalization":
+            track.setNormalization(Integer.parseInt(value));
+            break;
 		default:
 			log.warning("Unknown Track key '"+key+"' with value '"+value+"'");
 			break;
@@ -599,6 +602,8 @@ public class Parser {
 		case "Visible":
 			playlist.setVisible(Boolean.parseBoolean(value));
 			break;
+        case "Description":
+            playlist.setDescription(value);
 		default:
 			log.warning("Unknown Playlist key '"+key+"' with value '"+value+"'");
 			break;
