@@ -39,10 +39,6 @@ public class Playlist {
 	// Getter
 	// --------------------------------------------------
 
-    public Boolean getAudiobooks() {
-        return audiobooks;
-    }
-
     public Boolean isAllItems() {
 		return this.allItems;
 	}
