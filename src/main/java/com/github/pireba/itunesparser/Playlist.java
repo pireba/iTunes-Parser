@@ -33,12 +33,13 @@ public class Playlist {
 	private String smartInfo;
 	private Boolean tvShows;
 	private Boolean visible;
+    private String description;
 	
 	// --------------------------------------------------
 	// Getter
 	// --------------------------------------------------
-	
-	public Boolean isAllItems() {
+
+    public Boolean isAllItems() {
 		return this.allItems;
 	}
 	
@@ -105,6 +106,10 @@ public class Playlist {
 	public Boolean isVisible() {
 		return this.visible;
 	}
+	
+	public String getDescription() {
+        return description;
+    }
 	
 	// --------------------------------------------------
 	// Setter
@@ -177,4 +182,8 @@ public class Playlist {
 	public void setVisible(Boolean visible) {
 		this.visible = visible;
 	}
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

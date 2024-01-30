@@ -25,6 +25,9 @@ public class Library {
 	private URL musicFolder;
 	private Boolean showContentRatings;
 	
+	// Constructor
+	public Library() {}
+	
 	// --------------------------------------------------
 	// Getter
 	// --------------------------------------------------

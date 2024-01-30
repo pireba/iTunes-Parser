@@ -75,19 +75,28 @@ public class Track {
 	private String trackType;
 	private Integer volumeAdjustment;
 	private Integer year;
-	
 	private Boolean video;
 	private Boolean movie;
 	private Integer videoHeight;
 	private Integer videoWidth;
 	private Boolean unplayed;
 	private Boolean podcast;
+    private Integer normalization;
+    private String work;
 	
 	// --------------------------------------------------
 	// Getter
 	// --------------------------------------------------
 	
-	public String getAlbum() {
+	public Boolean getAlbumRatingComputed() {
+        return albumRatingComputed;
+    }
+
+    public Integer getBitrate() {
+        return bitrate;
+    }
+
+    public String getAlbum() {
 		return this.album;
 	}
 	
@@ -347,6 +356,13 @@ public class Track {
 		return this.podcast;
 	}
 	
+	public Integer getNormalization() {
+        return normalization;
+    }
+	
+	public String getWork() {
+	    return work;
+	}
 	
 	// --------------------------------------------------
 	// Setter
@@ -375,10 +391,10 @@ public class Track {
 	public void setArtworkCount(Integer artworkCount) {
 		this.artworkCount = artworkCount;
 	}
-	
-	public void setBitRate(Integer bitRate) {
-		this.bitrate = bitRate;
-	}
+
+    public void setBitrate(Integer bitrate) {
+        this.bitrate = bitrate;
+    }
 	
 	public void setBpm(Integer bpm) {
 		this.bpm = bpm;
@@ -610,6 +626,14 @@ public class Track {
 	
 	public void setPodcast(Boolean isPodcast){
 		this.podcast = isPodcast;
+	}
+	
+	public void setNormalization(Integer normalization) {
+        this.normalization = normalization;
+    }
+	
+	public void setWork(String work) {
+	    this.work = work;
 	}
 	
 }
